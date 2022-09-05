@@ -1,5 +1,6 @@
 import requests
 
+
 class YD:
     """Класс работы с API ЯндексДиск"""
 
@@ -38,4 +39,4 @@ class YD:
             response = requests.put(href, data=data)
             if response.status_code == 201:
                 print(f"Файл '{file['file_name']}' записан")
-        print(f"Записано '{len(files)}' файла в папку '{path}'")
+        print(f"Записано '{len(files)}' файлов в папку '{path}'")

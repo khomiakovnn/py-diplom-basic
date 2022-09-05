@@ -1,9 +1,8 @@
-
 import user_data
 import json
-from pprint import pprint
 from vk_class import VK
 from yd_class import YD
+
 
 def dump_json(result_json):
     """Форматирует словарь и записывает результирующий файл со списком фото"""
@@ -13,6 +12,7 @@ def dump_json(result_json):
         json.dump(result_json, file, indent=4, ensure_ascii=False)
     print('Файл res.json создан')
 
+
 def run():
     vk = VK(user_data.vk_token, user_data.vk_user_id)
     json_data = vk.get_photos()
@@ -21,6 +21,7 @@ def run():
     yd.make_directory(path)
     yd.upload(path, json_data)
     dump_json(json_data)
+
 
 if __name__ == "__main__":
     run()
