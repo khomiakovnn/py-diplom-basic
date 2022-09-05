@@ -2,4 +2,5 @@
 /venv/
 /.idea/
 /__pycache__/
-user_data.py
+res.json
+
